@@ -49,7 +49,7 @@ export default function Canvas({}: Props) {
 
   return (
     <>
-      <div className=" bg-white flex justify-center items-center">
+      <div className=" bg-white flex justify-center items-center overflow-clip shadow-md">
         <div className="relative">
           <canvas
             ref={canvasRef}
