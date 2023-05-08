@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const redux = (props: Props) => {
+const ReduxIcon = (props: Props) => {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>Redux</title>
@@ -11,4 +11,4 @@ const redux = (props: Props) => {
   );
 };
 
-export default redux;
+export default ReduxIcon;

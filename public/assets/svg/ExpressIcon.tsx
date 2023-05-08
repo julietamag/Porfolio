@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const express = (props: Props) => {
+const ExpressIcon = (props: Props) => {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>Express</title>
@@ -11,4 +11,4 @@ const express = (props: Props) => {
   );
 };
 
-export default express;
+export default ExpressIcon;

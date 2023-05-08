@@ -2,17 +2,17 @@ import React from "react";
 
 type Props = {};
 
-const sql = (props: Props) => {
+const SqlIcon = (props: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 61 81"
       fill="#fff"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       stroke="#000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <use xlinkHref="#A" x=".5" y=".5" />
       <symbol id="A" overflow="visible">
@@ -26,6 +26,6 @@ const sql = (props: Props) => {
   );
 };
 
-export default sql;
+export default SqlIcon;
 
 

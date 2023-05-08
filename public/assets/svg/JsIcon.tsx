@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const js = (props: Props) => {
+const JsIcon = (props: Props) => {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>JavaScript</title>
@@ -11,4 +11,4 @@ const js = (props: Props) => {
   );
 };
 
-export default js;
+export default JsIcon;
