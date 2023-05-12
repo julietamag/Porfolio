@@ -36,7 +36,7 @@ const SingleProject = (props: Props) => {
                 className="lg:border-r-2  lg:p-10 p-2 my-6 lg:my-0"
               >
                 <motion.div
-                  initial={{ x: 500, opacity: 0 }}
+                  initial={{ x: 200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
