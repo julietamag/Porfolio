@@ -23,8 +23,11 @@
   },
   "devDependencies": {
     "@types/react-color": "^3.0.6",
+    "@types/react-scroll": "^1.8.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
+    "react-scroll": "^1.8.9",
+    "tailwind-scrollbar": "^3.0.1",
     "tailwindcss": "^3.3.1"
   }
 }

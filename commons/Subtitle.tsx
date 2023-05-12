@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = { text: string };
+type Props = { text: string};
 
 const Subtitle = (props: Props) => {
   const { text } = props;
   return (
-    <div className="flex mx-4 justify-center items-center my-5">
+    <div className="flex mx-4 justify-center items-center my-5 " >
       <motion.h2
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

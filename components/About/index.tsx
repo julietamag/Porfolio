@@ -8,12 +8,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="h-screen mb-96 md:mb-40 lg:mb-20 xl:mb-0 "
-      viewport={{ once: true }}
-    >
+    <>
       <Subtitle text="About" />
       <div className="lg:flex lg:flex-row flex-col mx-4 justify-center  ">
         <motion.article
@@ -49,7 +44,7 @@ const About = (props: Props) => {
       <span className="block lg:hidden">
         <ProfileImage />
       </span>
-    </motion.section>
+    </>
   );
 };
 

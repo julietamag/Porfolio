@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import logo from "../public/Logo/svg/IMG_5285.svg";
+import SmoothScrollLink from "@/commons/SmoothScrollLink";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,14 +10,14 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between flex-wrap py-6 px-10 sticky top-0 z-20 text-white bg-white shadow-lg">
       <motion.div
-      initial={{ y: -200, opacity: 0, scale: 0.5 }}
-      animate={{y: 0,  opacity: 1, scale: 1 }}
+        initial={{ y: -200, opacity: 0, scale: 0.5 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{
           duration: 1,
         }}
         className="flex items-center flex-shrink-0 mr-6 lg:mr-72 "
       >
-        <Link href="/">
+        <Link href='/'>
           <h1 className="font-extrabold text-indigo-900 text-4xl">JM</h1>
         </Link>
         ;
@@ -30,14 +30,14 @@ const Navbar = () => {
           className="flex items-center px-3 py-2 rounded text-white-500 hover:text-white-300"
         >
           <svg
-            className={`fill-white h-3 w-3 ${isOpen ? "hidden" : "block"}`}
+            className={`fill-indigo-900 h-3 w-3 ${isOpen ? "hidden" : "block"}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
           <svg
-            className={`h-3 w-3 fill-white ${isOpen ? "block" : "hidden"}`}
+            className={`h-3 w-3 fill-indigo-900 ${isOpen ? "block" : "hidden"}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -47,57 +47,62 @@ const Navbar = () => {
       </div>
       <div
         className={`w-full lg:flex lg:items-right lg:justify-center lg:items-center lg:w-auto  ${
-          isOpen ? " bg-indigo-950 p-3" : "hidden"
+          isOpen ? " bg-white p-3" : "hidden"
         }`}
       >
         <div className="text-base ">
-          <motion.a
-          initial={{ y: -140, opacity: 0, scale: 0.5 }}
-          animate={{y: 0,  opacity: 1, scale: 1 }}
+          <motion.p
+            initial={{ y: -140, opacity: 0, scale: 0.5 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{
               duration: 1,
             }}
-            href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 "
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
+            onClick={() => setIsOpen(false)}
           >
-            About
-          </motion.a>
-          <motion.a
-          initial={{ y: -160, opacity: 0, scale: 0.5 }}
-          animate={{y: 0,  opacity: 1, scale: 1 }}
+            <SmoothScrollLink to="about">About</SmoothScrollLink>
+          </motion.p>
+          <motion.p
+            initial={{ y: -160, opacity: 0, scale: 0.5 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{
               duration: 1,
             }}
-            href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 "
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth "
+            onClick={() => setIsOpen(false)}
           >
-            Projects
-          </motion.a>
-          <motion.a
-          initial={{ y: -180, opacity: 0, scale: 0.5 }}
-          animate={{y: 0,  opacity: 1, scale: 1 }}
+            <SmoothScrollLink to="projects">Projects</SmoothScrollLink>
+          </motion.p>
+          <motion.p
+            initial={{ y: -180, opacity: 0, scale: 0.5 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{
               duration: 1,
             }}
-            href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950"
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
+            onClick={() => setIsOpen(false)}
           >
-            Contact
-          </motion.a>
+            <SmoothScrollLink to="contact">Contact</SmoothScrollLink>
+          </motion.p>
         </div>
-        <motion.div initial={{ y: -200, opacity: 0, scale: 0.5 }}
-          animate={{y: 0,  opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1.2,
-            }}>
+        <motion.a
+          initial={{ y: -200, opacity: 0, scale: 0.5 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+          }}
+          href='/assets/cv/JulietaMagnagoResume.pdf'
+          target="_blank"
+          type="application/pdf" rel="alternate"
+        >
           <button
             className={`bg-transparent hover:bg-indigo-800 text-indigo-800 font-semibold hover:text-white py-1 px-4 border border-indigo-800 hover:border-transparent rounded ${
-              isOpen && "mt-12 px-11 py-4"
+              isOpen && "mt-10 px-11 py-2"
             }`}
           >
             Resume
           </button>
-        </motion.div>
+        </motion.a>
       </div>
     </nav>
   );
