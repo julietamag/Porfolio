@@ -7,3 +7,15 @@
 body{
     font-family: 'Poppins';
 }
+
+#singleProjectImgContainer {
+    width: 500px;
+    height: 500px;
+}
+
+@media only screen and (max-width:675px) {
+    #singleProjectImgContainer {
+        width: fit-content;
+        height: 300px;
+    }
+}

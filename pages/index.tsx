@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Canvas from "@/components/Header/Canvas";
 import React from "react";
 import svg from '../public/assets/svg/layered-waves-haikei (1).svg'
+import Projects from "@/components/Projects";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Canvas />
       </section>
       <About />
+      <Projects />
     </div>
   );
 };

@@ -27,91 +27,92 @@ export default function TechStack({}: Props) {
 
   return (
     <>
-      <motion.div
+      <motion.ul
         variants={containerVariants}
         initial="initial"
         whileInView="animate"
-        className="flex justify-center items-center gap-3"
+        viewport={{once: true}}
+        className="md:flex md:justify-center md:items-center md:gap-3  md:my-2 md:text-base inline-flex text-center flex-wrap gap-3 max-w-screen  mt-2 mb-6 mx-8  text-sm"
       >
-        <motion.p
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           HTML
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           CSS
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           JavaScript
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           React
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Redux
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Node.js
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           SQL
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Express
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           TypeScript
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Next.js
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Bootstrap
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           Tailwind
-        </motion.p>
-        <motion.p
+        </motion.li>
+        <motion.li
           variants={itemVariants}
-          className="hover:text-indigo-500 hover:animate-bounce"
-        >
+          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
+        > 
           MaterialUI
-        </motion.p>
-      </motion.div>
+        </motion.li>
+      </motion.ul>
     </>
   );
 }
