@@ -24,8 +24,8 @@ const SingleProject = (props: Props) => {
           key={data.title}
           className={
             index === projectData.length - 1
-              ? "lg:border-x-2 lg:rounded border-y-2 w-screen lg:w-2/3  flex items-center lg:justify-between justify-center "
-              : "lg:border-x-2 lg:rounded border-t-2 w-screen lg:w-2/3  flex items-center lg:justify-between justify-center "
+              ? "lg:border-x-2 lg:rounded border-y-2 w-screen xl:w-2/3  flex items-center lg:justify-between justify-center "
+              : "lg:border-x-2 lg:rounded border-t-2 w-screen xl:w-2/3  flex items-center lg:justify-between justify-center "
           }
         >
           <li className="lg:inline-flex lg:flex-row flex flex-col items-center lg:justify-between">

@@ -8,7 +8,7 @@ const Projects = () => {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className=" max-w-screen mt-96 md:mt-40 lg:mt-0"
+      className=" max-w-screen mt-96 md:mt-62 lg:mt-0"
       viewport={{ once: true }}
     >
      <Subtitle text="Projects"/>

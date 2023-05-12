@@ -11,7 +11,7 @@ const About = (props: Props) => {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="h-screen mb-96 md:mb-40 lg:mb-0"
+      className="h-screen mb-96 md:mb-40 lg:mb-20 xl:mb-0 "
       viewport={{ once: true }}
     >
       <Subtitle text="About" />
@@ -23,7 +23,7 @@ const About = (props: Props) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className=" lg:w-1/4  lg:m-9 m-4"
+          className=" xl:w-1/4  lg:m-9 m-4"
         >
           <p className="text-lg">
             Hi! My name is Julieta and I enjoy to create though code.

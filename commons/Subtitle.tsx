@@ -8,7 +8,7 @@ const Subtitle = (props: Props) => {
   return (
     <div className="flex mx-4 justify-center items-center my-5">
       <motion.h2
-        initial={{ x: -500, opacity: 0 }}
+        initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
           duration: 1,
@@ -19,7 +19,7 @@ const Subtitle = (props: Props) => {
         {text}
       </motion.h2>
       <motion.span
-        initial={{ x: 500, opacity: 0 }}
+        initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
           duration: 1,
