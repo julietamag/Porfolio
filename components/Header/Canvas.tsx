@@ -56,6 +56,7 @@ export default function Canvas({}: Props) {
             onMouseDown={onMouseDown}
             onTouchStart={onTouchStart}
             className="shadow-md"
+            style={{ touchAction: "none" }}
           />
 
           <Title />
