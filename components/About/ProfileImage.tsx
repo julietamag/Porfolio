@@ -18,7 +18,7 @@ const ProfileImage = (props: Props) => {
             className="absolute m-3 lg:w-80 lg:h-80 w-60 h-60 outline outline-offset-2 outline-indigo-800"
           ></motion.div>
           <motion.div
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{once: true}}
             transition={{

@@ -27,6 +27,10 @@ const Form: React.FC<Props> = (props) => {
       if (!values.name || !values.lastname || !values.email || !values.message)
         return toast.error("Come on! You must complete all fields");
       await sendContactForm(values);
+      if (nameRef.current) nameRef.current.value = "";
+      if (lastnameRef.current) lastnameRef.current.value = "";
+      if (emailRef.current) emailRef.current.value = "";
+      if (messageRef.current) messageRef.current.value = "";
       toast.success("Yeii message sent! I will try to reply ASAP");
     } catch (error) {
       toast.error("Uhmmm something failed sending the message");
