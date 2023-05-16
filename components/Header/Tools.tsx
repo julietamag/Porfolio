@@ -23,7 +23,7 @@ const Tools = (props: Props) => {
         duration: 1,
       }}
     >
-      <div className="flex items-center justify-end  gap-x-9 m-9 h-12">
+      <div className="flex items-center justify-end md:gap-x-9 gap-x-3 md:m-9 my-9 mx-4 h-12">
         {open && (
           <CompactPicker
             color={color}
