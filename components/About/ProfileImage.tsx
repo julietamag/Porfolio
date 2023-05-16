@@ -15,7 +15,7 @@ const ProfileImage = (props: Props) => {
             transition={{
               duration: 1,
             }}
-            className="absolute m-3 lg:w-80 lg:h-80 w-60 h-60 outline outline-offset-2 outline-indigo-400"
+            className="absolute m-3 lg:w-80 lg:h-80 w-60 h-60 outline outline-offset-2 outline-indigo-800"
           ></motion.div>
           <motion.div
             initial={{ x: 200, opacity: 0 }}

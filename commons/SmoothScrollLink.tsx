@@ -10,8 +10,8 @@ const SmoothScrollLink = (props: Props) => {
       to={to}
       smooth={true}
       duration={500}
-      className="cursor-pointer "
-      offset={-100}
+      className="cursor-pointer link link--elara "
+      offset={-150}
   
     >
          {children}

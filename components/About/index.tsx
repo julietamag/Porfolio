@@ -20,7 +20,7 @@ const About = (props: Props) => {
           viewport={{ once: true }}
           className=" xl:w-1/4  lg:m-9 m-4"
         >
-          <p className="text-lg">
+          <p className="text-lg ">
             Hi! My name is Julieta and I enjoy to create though code.
             <br></br> My journey into the world of coding began when I was just
             a child playing around with Scratch. It was a fun way to pass the
@@ -29,10 +29,11 @@ const About = (props: Props) => {
             passion. <br></br> At 16, I started my career as a fashion model,
             where I developed a fierce perseverance and independence - two key
             traits that have helped me thrive as a developer. <br></br> Today,
-            I`m a skilled full-stack developer who`s constantly motivated to
-            improve my abilities and seek out opportunities to learn and grow.{" "}
-            <br></br> Little fun fact, when I`m not knee-deep in code, you can
-            find me painting watercolor portraits and listening to music.
+            I&apos;m a skilled full-stack developer who&apos;s constantly
+            motivated to improve my abilities and seek out opportunities to
+            learn and grow. <br></br> Little fun fact, when I&apos;m not
+            knee-deep in code, you can find me painting watercolor portraits and
+            listening to music.
           </p>
         </motion.article>
         <span className="hidden lg:block">

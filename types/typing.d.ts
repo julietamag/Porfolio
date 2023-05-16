@@ -5,3 +5,7 @@ type Draw = {
   }
   
   type Point = { x: number; y: number }
+
+  interface dataMessage {
+    [key: string]: string;
+  }

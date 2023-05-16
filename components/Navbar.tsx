@@ -3,7 +3,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SmoothScrollLink from "@/commons/SmoothScrollLink";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +16,7 @@ const Navbar = () => {
         }}
         className="flex items-center flex-shrink-0 mr-6 lg:mr-72 "
       >
-        <Link href='/'>
+        <Link href="/">
           <h1 className="font-extrabold text-indigo-900 text-4xl">JM</h1>
         </Link>
         ;
@@ -91,12 +90,13 @@ const Navbar = () => {
           transition={{
             duration: 1.2,
           }}
-          href='/assets/cv/JulietaMagnagoResume.pdf'
+          href="/assets/cv/JulietaMagnagoResume.pdf"
           target="_blank"
-          type="application/pdf" rel="alternate"
+          type="application/pdf"
+          rel="alternate"
         >
           <button
-            className={`bg-transparent hover:bg-indigo-800 text-indigo-800 font-semibold hover:text-white py-1 px-4 border border-indigo-800 hover:border-transparent rounded ${
+            className={`bg-transparent  hvr-sweep-to-right   0 text-indigo-800 font-semibold hover:text-white py-1 px-4 border border-indigo-800  active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300  ${
               isOpen && "mt-10 px-11 py-2"
             }`}
           >

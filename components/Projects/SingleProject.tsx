@@ -1,9 +1,14 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import imageTlgb from "../../public/assets/Projects/tlgb.png";
 import { motion } from "framer-motion";
 import { projectData } from "./data";
 import Link from "next/link";
+import {
+  containerVariantsList,
+  itemVariantsList,
+  projectContainerVariants,
+  projectItemVariants,
+} from "@/lib/motion";
 
 type Props = {};
 type WindowSize = number;
@@ -36,7 +41,7 @@ const SingleProject = (props: Props) => {
                 className="lg:border-r-2  lg:p-10 p-2 my-6 lg:my-0"
               >
                 <motion.div
-                  initial={{ x: 350, opacity: 0 }}
+                  initial={{ x: -350, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
@@ -54,39 +59,75 @@ const SingleProject = (props: Props) => {
             )}
 
             <span className="lg:w-2/4 flex-column lg:justify-between justify-center items-center  lg:p-6 p-4">
-              <span className="inline-flex gap-5 py-3">
+              <motion.span
+                variants={projectContainerVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="inline-flex gap-5 py-3"
+              >
                 {data.demo !== "" && (
-                  <button>
+                  <motion.button variants={projectItemVariants}>
                     <Link
                       href={data.demo}
                       target="blank"
-                      className="hover:underline p-1 hover:text-indigo-500 "
+                      className=" p-1 hover:text-indigo-500 link link--leda "
+                      aria-label="Go to live project demo"
                     >
                       LIVE
                     </Link>
-                  </button>
+                  </motion.button>
                 )}
-                <Link
-                  href={data.gitHub}
-                  target="blank"
-                  className="hover:underline p-1 hover:text-indigo-500 "
-                >
-                  <p>CODE</p>
-                </Link>
-              </span>
-              <h4 className="text-3xl font-semibold lg:mb-6">{data.title}</h4>
-              <p>{data.description}</p>
+                <motion.button variants={itemVariantsList}>
+                  <Link
+                    href={data.gitHub}
+                    target="blank"
+                    className=" p-1 hover:text-indigo-500 link link--leda"
+                    aria-label="Go to GitHub Repo"
+                  >
+                    CODE
+                  </Link>
+                </motion.button>
+              </motion.span>
+              <motion.h4
+                initial={{ y: 12, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                }}
+                viewport={{ once: true }}
+                className="text-3xl font-semibold lg:mb-6"
+              >
+                {data.title}
+              </motion.h4>
+              <motion.p
+                initial={{ y: 12, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                }}
+                viewport={{ once: true }}
+              >
+                {data.description}
+              </motion.p>
 
-              <ul className="inline-flex flex-wrap gap-3 mt-10">
+              <motion.ul
+                variants={containerVariantsList}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="inline-flex flex-wrap gap-3 mt-10"
+              >
                 {data.techStack.map((stack) => (
-                  <li
+                  <motion.li
+                    variants={itemVariantsList}
                     key={stack}
-                    className="rounded-2xl border p-1 hover:bg-indigo-500 hover:text-slate-100"
+                    className="rounded-2xl border p-1 hover:bg-indigo-800 hover:text-slate-100"
                   >
                     {stack}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </span>
 
             {/* RIGHT */}
@@ -120,8 +161,8 @@ const SingleProject = (props: Props) => {
                 className="lg:border-l-2  lg:p-10 p-2 my-6 lg:my-0"
               >
                 <motion.div
-                  initial={{ x: 100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
+                  initial={{ y: -100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 1,
