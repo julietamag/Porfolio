@@ -14,7 +14,7 @@ const Subtitle = (props: Props) => {
           duration: 1,
         }}
         viewport={{ once: true }}
-        className="mr-4 font-bold  lg:text-5xl text-4xl text-left"
+        className="mr-4 font-bold md:text-5xl text-4xl text-left"
       >
         {text}
       </motion.h2>
