@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap py-6 px-10 sticky top-0 z-20 text-white bg-white shadow-lg">
+    <nav className="flex items-center justify-between flex-wrap py-4 md:py-6 px-10 sticky top-0 z-20 text-white bg-white shadow-lg">
       <motion.div
         initial={{ y: -200, opacity: 0, scale: 0.5 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
@@ -17,7 +17,7 @@ const Navbar = () => {
         className="flex items-center flex-shrink-0 mr-6 lg:mr-72 "
       >
         <Link href="/">
-          <h1 className="font-extrabold text-indigo-900 text-4xl">JM</h1>
+          <h1 className="font-extrabold text-indigo-900 text-3xl md:text-4xl">JM</h1>
         </Link>
         ;
       </motion.div>
