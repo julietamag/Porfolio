@@ -1,6 +1,7 @@
 import Subtitle from "@/commons/Subtitle";
 import React from "react";
 import Form from "./Form";
+import Social from "./Social";
 
 type Props = {};
 
@@ -10,6 +11,7 @@ const Contact = (props: Props) => {
       <Subtitle text="Contact" />
 
       <Form />
+      <Social />
     </>
   );
 };

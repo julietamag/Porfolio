@@ -41,8 +41,8 @@ const SingleProject = (props: Props) => {
                 className="lg:border-r-2  lg:p-10 p-2 my-6 lg:my-0"
               >
                 <motion.div
-                  initial={{ x: -350, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
+                  initial={{ y: 150, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 1,
@@ -107,7 +107,6 @@ const SingleProject = (props: Props) => {
                   duration: 0.8,
                 }}
                 viewport={{ once: true }}
-          
               >
                 {data.description}
               </motion.p>
@@ -138,8 +137,8 @@ const SingleProject = (props: Props) => {
                 className="lg:border-l-2  lg:p-10 p-2 my-6 lg:my-0"
               >
                 <motion.div
-                  initial={{ x: 350, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
+                  initial={{ y: 150, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 1,

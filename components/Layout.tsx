@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import Navbar from "./Navbar";
 import Head from "next/head";
+import Social from "./Social";
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
@@ -19,7 +20,9 @@ const Layout = ({ children }: PropsWithChildren) => {
         ></meta>
       </Head>
       <Navbar />
+      <Social></Social>
       {children}
+    
     </>
   );
 };
