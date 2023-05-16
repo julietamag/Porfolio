@@ -53,7 +53,7 @@ const Title = (props: Props) => {
           with passion to create through code.
         </motion.h4>
       </div>
-      <div className="absolute lg:top-3/4 lg:left-3/4 z-10 top-2/3 left-2/4  p-2  select-none invisible md:visible">
+      <div className="absolute lg:top-3/4 lg:left-3/4 z-10 top-2/3 left-2/4  p-2  select-none ">
         <motion.h3
           initial={{ y: -15, opacity: 0 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
