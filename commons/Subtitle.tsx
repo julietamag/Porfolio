@@ -6,7 +6,7 @@ type Props = { text: string};
 const Subtitle = (props: Props) => {
   const { text } = props;
   return (
-    <div className="flex mx-4 justify-center items-center my-5 md:text-5xl text-4xl" >
+    <div className="flex mx-4 justify-center items-center my-5" >
       <motion.h2
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -14,7 +14,7 @@ const Subtitle = (props: Props) => {
           duration: 1,
         }}
         viewport={{ once: true }}
-        className="mr-4 font-bold md:text-5xl text-4xl text-left"
+        className="mr-4 font-bold text-4xl text-left "
       >
         {text}
       </motion.h2>
