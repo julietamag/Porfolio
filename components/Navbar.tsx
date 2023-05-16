@@ -57,9 +57,9 @@ const Navbar = () => {
               duration: 1,
             }}
             className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
-            onClick={() => setIsOpen(false)}
+           
           >
-            <SmoothScrollLink to="about">About</SmoothScrollLink>
+            <SmoothScrollLink to="about"  onClick={() => setIsOpen(false)} >About</SmoothScrollLink>
           </motion.p>
           <motion.p
             initial={{ y: -160, opacity: 0, scale: 0.5 }}
@@ -70,7 +70,7 @@ const Navbar = () => {
             className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth "
             onClick={() => setIsOpen(false)}
           >
-            <SmoothScrollLink to="projects">Projects</SmoothScrollLink>
+            <SmoothScrollLink to="projects" onClick={() => setIsOpen(false)} >Projects</SmoothScrollLink>
           </motion.p>
           <motion.p
             initial={{ y: -180, opacity: 0, scale: 0.5 }}
@@ -81,7 +81,7 @@ const Navbar = () => {
             className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
             onClick={() => setIsOpen(false)}
           >
-            <SmoothScrollLink to="contact">Contact</SmoothScrollLink>
+            <SmoothScrollLink to="contact" onClick={() => setIsOpen(false)} >Contact</SmoothScrollLink>
           </motion.p>
         </div>
         <motion.a
