@@ -8,14 +8,19 @@ const Layout = ({ children }: PropsWithChildren) => {
     <>
       <Head>
         <title>Julieta Magnago | Web Developer</title>
-        <meta name="description" content="Welcome to my Full Stack Developer Porfolio"></meta>
+        <meta
+          name="description"
+          content="Welcome to my Full Stack Developer Porfolio"
+        ></meta>
         <meta name="author" content="Julieta Magnago"></meta>
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript, Web Developer, portfolio, developer, Software Developer, React, Node.js, Full-Stack, Frontend, Backend, TypeScript, Next.js, Redux"
         ></meta>
-          <meta property="og:image" content='../public/assets/Meta/Screenshot from 2023-05-16 16-55-48.png'></meta>
-  <meta name="twitter:image" content='../public/assets/Meta/Screenshot from 2023-05-16 16-55-48.png'></meta>
+
+        <meta name="image" content="/assets/Meta/default.png" />
+        <meta property="og:image" content="/assets/Meta/default.png" />
+
         <link rel="icon" href="../Logo/png/IMG_5285.PNG" />
         <meta
           name="viewport"
@@ -25,7 +30,6 @@ const Layout = ({ children }: PropsWithChildren) => {
       <Navbar />
       <Social></Social>
       {children}
-    
     </>
   );
 };
