@@ -15,6 +15,7 @@ const Subtitle = (props: Props) => {
         }}
         viewport={{ once: true }}
         className="mr-4 font-bold text-4xl text-left "
+        style={{fontSize: '2.25rem'}}
       >
         {text}
       </motion.h2>

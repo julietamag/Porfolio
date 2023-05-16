@@ -37,7 +37,7 @@ const Title = (props: Props) => {
             delay: 1.4,
             duration: 1,
           }}
-          className=" lg:text-5xl ml-1 font-bold text-slate-600 text-3xl"
+          className=" lg:text-5xl  font-bold text-slate-600 text-3xl"
         >
           Web Developer
         </motion.h2>
@@ -48,7 +48,7 @@ const Title = (props: Props) => {
             delay: 1.6,
             duration: 1,
           }}
-          className="lg:text-1xl ml-3 my-4 font-bold text-slate-600  text-1xl "
+          className="lg:text-1xl ml-1 my-4 font-bold text-slate-600  text-1xl "
         >
           with passion to create through code.
         </motion.h4>
