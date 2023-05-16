@@ -22,6 +22,7 @@ const Tools = (props: Props) => {
         delay: 2,
         duration: 1,
       }}
+      className="invisible md:visible"
     >
       <div className="flex items-center justify-end  gap-x-9 m-9 h-12">
         {open && (

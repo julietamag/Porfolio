@@ -54,7 +54,7 @@ export default function Canvas({}: Props) {
           <canvas
             ref={canvasRef}
             onMouseDown={onMouseDown}
-            onTouchStart={onTouchStart}
+            // onTouchStart={onTouchStart}
             className="shadow-md"
           />
 
