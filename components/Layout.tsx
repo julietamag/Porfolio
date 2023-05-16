@@ -20,6 +20,7 @@ const Layout = ({ children }: PropsWithChildren) => {
 
         <meta name="image" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png" />
         <meta property="og:image" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png" />
+        <meta name="twitter:card" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png"></meta>
 
         <link rel="icon" href="../Logo/png/IMG_5285.PNG" />
         <meta
