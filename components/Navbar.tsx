@@ -17,7 +17,9 @@ const Navbar = () => {
         className="flex items-center flex-shrink-0 mr-6 lg:mr-72 "
       >
         <Link href="/">
-          <h1 className="font-extrabold text-indigo-900 text-3xl md:text-4xl">JM</h1>
+          <h1 className="font-extrabold text-indigo-900 text-3xl md:text-4xl">
+            JM
+          </h1>
         </Link>
         ;
       </motion.div>
@@ -56,10 +58,11 @@ const Navbar = () => {
             transition={{
               duration: 1,
             }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
-           
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth"
           >
-            <SmoothScrollLink to="about"  onClick={() => setIsOpen(false)} >About</SmoothScrollLink>
+            <SmoothScrollLink to="about" onClick={() => setIsOpen(false)}>
+              About
+            </SmoothScrollLink>
           </motion.p>
           <motion.p
             initial={{ y: -160, opacity: 0, scale: 0.5 }}
@@ -67,10 +70,12 @@ const Navbar = () => {
             transition={{
               duration: 1,
             }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth "
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth "
             onClick={() => setIsOpen(false)}
           >
-            <SmoothScrollLink to="projects" onClick={() => setIsOpen(false)} >Projects</SmoothScrollLink>
+            <SmoothScrollLink to="projects" onClick={() => setIsOpen(false)}>
+              Projects
+            </SmoothScrollLink>
           </motion.p>
           <motion.p
             initial={{ y: -180, opacity: 0, scale: 0.5 }}
@@ -78,10 +83,12 @@ const Navbar = () => {
             transition={{
               duration: 1,
             }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
+            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth"
             onClick={() => setIsOpen(false)}
           >
-            <SmoothScrollLink to="contact" onClick={() => setIsOpen(false)} >Contact</SmoothScrollLink>
+            <SmoothScrollLink to="contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </SmoothScrollLink>
           </motion.p>
         </div>
         <motion.a
@@ -96,7 +103,7 @@ const Navbar = () => {
           rel="alternate"
         >
           <button
-            className={`bg-transparent  hvr-sweep-to-right   0 text-indigo-800 font-semibold hover:text-white py-1 px-4 border border-indigo-800  active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300  ${
+            className={`bg-transparent  hvr-sweep-to-right text-indigo-900 font-semibold hover:text-white py-1 px-4 border border-indigo-900  active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300  ${
               isOpen && "mt-10 px-11 py-2"
             }`}
           >

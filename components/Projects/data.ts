@@ -1,16 +1,6 @@
 import imageTmdb from "../../public/assets/Projects/tmdb.png";
 import imageKlimty from "../../public/assets/Projects/klimty.png";
-import imageGlobant from "../../public/assets/Projects/klimtyEcomm.png";
-import { StaticImageData } from "next/image";
-
-interface ProjectData {
-  image: StaticImageData;
-  title: string;
-  description: string;
-  techStack: string[];
-  gitHub: string;
-  demo: string;
-}
+import imageGlobant from "../../public/assets/Projects/globant.png";
 
 export const projectData: ProjectData[] = [
   {

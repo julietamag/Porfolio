@@ -1,9 +1,9 @@
-import Pencil from "@/public/assets/svg/Pencil";
+import { Pencil } from "../Social/svg";
 
 import React, { useState } from "react";
 import { CompactPicker } from "react-color";
 import { motion } from "framer-motion";
-import Trash from "@/public/assets/svg/Trash";
+import { Trash } from "../Social/svg";
 
 type Props = {
   color: string;
