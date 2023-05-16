@@ -20,7 +20,7 @@ const About = (props: Props) => {
           viewport={{ once: true }}
           className=" xl:w-1/4  lg:m-9 m-4"
         >
-          <p className="text-lg ">
+          <p className="lg:text-lg text-base">
             Hi! My name is Julieta and I enjoy to create though code.
             <br></br> My journey into the world of coding began when I was just
             a child playing around with Scratch. It was a fun way to pass the

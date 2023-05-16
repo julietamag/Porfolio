@@ -96,7 +96,7 @@ const SingleProject = (props: Props) => {
                   duration: 0.8,
                 }}
                 viewport={{ once: true }}
-                className="text-3xl font-semibold lg:mb-6"
+                className="text-3xl font-semibold mb-2 lg:mb-6"
               >
                 {data.title}
               </motion.h4>
@@ -107,6 +107,7 @@ const SingleProject = (props: Props) => {
                   duration: 0.8,
                 }}
                 viewport={{ once: true }}
+          
               >
                 {data.description}
               </motion.p>
