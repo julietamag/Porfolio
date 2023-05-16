@@ -18,9 +18,26 @@ const Layout = ({ children }: PropsWithChildren) => {
           content="HTML, CSS, JavaScript, Web Developer, portfolio, developer, Software Developer, React, Node.js, Full-Stack, Frontend, Backend, TypeScript, Next.js, Redux"
         ></meta>
 
-        <meta name="image" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png" />
-        <meta property="og:image" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png" />
-        <meta name="twitter:card" content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png"></meta>
+        <meta property="og:title" content="Julieta Magnago | Web Developer" />
+        <meta
+          property="og:description"
+          content="Welcome to my Full Stack Developer Porfolio"
+        />
+        <meta
+          property="og:image"
+          content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta
+          name="image"
+          content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png"
+        />
+        <meta
+          name="twitter:card"
+          content="https://julieta-magnago-dev-porfolio.vercel.app/assets/Meta/default.png"
+        />
 
         <link rel="icon" href="../Logo/png/IMG_5285.PNG" />
         <meta
