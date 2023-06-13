@@ -15,7 +15,7 @@ const Social = (props: Props) => {
 
   return (
     <>
-      {windowSize > 850 && (
+      {windowSize > 650 && (
           <div className="xl:fixed xl:bottom-0 xl:ml-5 xl:z-20 ">
         <ul className="flex lg:flex-col gap-4 items-center justify-center  ">
           <li>
