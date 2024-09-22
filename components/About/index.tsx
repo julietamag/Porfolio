@@ -36,10 +36,10 @@ const About = ({}: Props) => {
             unlocking magic, and it sparked my love for code.{" "}
           </p>
           <p className="md:text-md text-base">
-            Fast-forward to today, and I've had the pleasure of working in
+            Fast-forward to today, and I&apos;ve had the pleasure of working in
             various roles, from beign a fashion modeling for great brands like
             Dior, Monclear and Diesel to becoming a skilled frontend engineer.
-            Currently, I'm working at{" "}
+            Currently, I&apos;m working at{" "}
             <a
               href="https://www.deliveryhero.com/"
               target="blank"
@@ -53,11 +53,11 @@ const About = ({}: Props) => {
             riders, and vendors effortlessly.{" "}
           </p>
           <p className="md:text-md text-base">
-            I'm passionate about creating seamless digital experiences and great
-            products that make a difference.
+            I&apos;m passionate about creating seamless digital experiences and
+            great products that make a difference.
           </p>
           <p className="md:text-md text-base">
-            Here are some technologies I've been working with lately:
+            Here are some technologies I&apos;ve been working with lately:
           </p>
           <TechStack />
         </motion.article>

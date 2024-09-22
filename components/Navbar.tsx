@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import SmoothScrollLink from "@/commons/SmoothScrollLink";
+import { randomUUID } from "crypto";
 
 interface Sections {
   reference: string;
@@ -71,6 +72,7 @@ const Navbar = () => {
               transition={{
                 duration: 1,
               }}
+              key={randomUUID()}
               className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
             >
               <SmoothScrollLink

@@ -4,6 +4,7 @@ import Subtitle from "@/commons/Subtitle";
 import Link from "next/link";
 import { workExperience } from "./data";
 import { motion } from "framer-motion";
+import { randomUUID } from "crypto";
 
 type Props = {};
 
@@ -13,7 +14,10 @@ const Experience = ({}: Props) => {
       <Subtitle text="Experience" />
       <div className="lg:mx-34 xl:mx-56 my-10">
         {workExperience.map((exp) => (
-          <div className="px-10 flex flex-col  m-4  leading-relaxed border-l-2 gap-4">
+          <div
+            key={randomUUID()}
+            className="px-10 flex flex-col  m-4  leading-relaxed border-l-2 gap-4"
+          >
             <div className="flex flex-col px-2 py-2 gap-2">
               {/* TITLE */}
               <motion.h3
@@ -51,12 +55,16 @@ const Experience = ({}: Props) => {
             {/* DESCRIPTION */}
             <div className="flex flex-col text-sm gap-2 ">
               {exp.description.map((desc) => (
-                <motion.div    initial={{ y: 12, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  duration: 1,
-                }}
-                viewport={{ once: true }} className="flex">
+                <motion.div
+                  key={randomUUID()}
+                  initial={{ y: 12, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 1,
+                  }}
+                  viewport={{ once: true }}
+                  className="flex"
+                >
                   <span className="text-indigo-800 pr-4">{`\u2023`}</span>
                   <p>{desc}</p>
                 </motion.div>
