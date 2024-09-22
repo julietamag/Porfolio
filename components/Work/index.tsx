@@ -4,7 +4,7 @@ import Subtitle from "@/commons/Subtitle";
 import Link from "next/link";
 import { workExperience } from "./data";
 import { motion } from "framer-motion";
-import { randomUUID } from "crypto";
+import {v4 as uuid} from 'uuid'
 
 type Props = {};
 
@@ -15,7 +15,7 @@ const Experience = ({}: Props) => {
       <div className="lg:mx-34 xl:mx-56 my-10">
         {workExperience.map((exp) => (
           <div
-            key={randomUUID()}
+            key={uuid()}
             className="px-10 flex flex-col  m-4  leading-relaxed border-l-2 gap-4"
           >
             <div className="flex flex-col px-2 py-2 gap-2">
@@ -56,7 +56,7 @@ const Experience = ({}: Props) => {
             <div className="flex flex-col text-sm gap-2 ">
               {exp.description.map((desc) => (
                 <motion.div
-                  key={randomUUID()}
+                  key={uuid()}
                   initial={{ y: 12, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{
