@@ -6,11 +6,12 @@ import Subtitle from "@/commons/Subtitle";
 
 type Props = {};
 
-const About = (props: Props) => {
+const About = ({}: Props) => {
   return (
     <>
       <Subtitle text="About" />
-      <div className="lg:flex lg:flex-row flex-col mx-4 justify-center  ">
+
+      <div className="md:flex md:flex-row flex-col mx-2 justify-center leading-relaxed">
         <motion.article
           initial={{ y: 12, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -18,31 +19,54 @@ const About = (props: Props) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className=" xl:w-1/4  lg:m-9 m-4"
+          className=" xl:w-1/3 lg:m-9 m-4 gap-y-4 flex flex-col "
         >
-          <p className="lg:text-lg text-base">
-            Hi! My name is Julieta and I enjoy to create though code.
-            <br></br> My journey into the world of coding began when I was just
-            a child playing around with Scratch. It was a fun way to pass the
-            time, seeing something I wrote come to life in my screen, but little
-            did I know it would lead me down a path that would become my
-            passion. <br></br> At 16, I started my career as a fashion model,
-            where I developed a fierce perseverance and independence - two key
-            traits that have helped me thrive as a developer. <br></br> Today,
-            I&apos;m a skilled full-stack developer who&apos;s constantly
-            motivated to improve my abilities and seek out opportunities to
-            learn and grow. <br></br> Little fun fact, when I&apos;m not
-            knee-deep in code, you can find me painting watercolor portraits and
-            listening to music.
+          <p className="md:text-md text-base">
+            Hello! My name is Julieta, and I love building things that come to
+            life on the internet. My journey into web development started when I
+            was a 9 year old kid tinkering with{" "}
+            <a
+              href={"https://scratch.mit.edu/"}
+              target="blank"
+              className="link link--leda  leading-5"
+            >
+              Scratch
+            </a>{" "}
+            — seeing the logic I had created come alive in the screen was like
+            unlocking magic, and it sparked my love for code.{" "}
           </p>
+          <p className="md:text-md text-base">
+            Fast-forward to today, and I've had the pleasure of working in
+            various roles, from beign a fashion modeling for great brands like
+            Dior, Monclear and Diesel to becoming a skilled frontend engineer.
+            Currently, I'm working at{" "}
+            <a
+              href="https://www.deliveryhero.com/"
+              target="blank"
+              className="link link--leda leading-5"
+            >
+              {" "}
+              Delivery Hero
+            </a>
+            , where I help build modern, accesible and robust applications that
+            thousands of curomer care agents use daily to assist our customers,
+            riders, and vendors effortlessly.{" "}
+          </p>
+          <p className="md:text-md text-base">
+            I'm passionate about creating seamless digital experiences and great
+            products that make a difference.
+          </p>
+          <p className="md:text-md text-base">
+            Here are some technologies I've been working with lately:
+          </p>
+          <TechStack />
         </motion.article>
-        <span className="hidden lg:block">
+        <div className="hidden sm:block">
           <ProfileImage />
-        </span>
+        </div>
       </div>
 
-      <TechStack />
-      <span className="block lg:hidden">
+      <span className="block sm:hidden">
         <ProfileImage />
       </span>
     </>

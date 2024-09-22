@@ -3,6 +3,18 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SmoothScrollLink from "@/commons/SmoothScrollLink";
 
+interface Sections {
+  reference: string;
+  title: string;
+}
+
+const sections: Sections[] = [
+  { title: "About", reference: "about" },
+  { title: "Experience", reference: "experience" },
+  { title: "Projects", reference: "projects" },
+  { title: "Contact", reference: "contact" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +29,7 @@ const Navbar = () => {
         className="flex items-center flex-shrink-0 mr-6 lg:mr-72 "
       >
         <Link href="/">
-          <h1 className="font-extrabold text-indigo-900 text-3xl md:text-4xl">
+          <h1 className="font-extrabold text-indigo-800 text-3xl md:text-4xl">
             JM
           </h1>
         </Link>
@@ -31,14 +43,14 @@ const Navbar = () => {
           className="flex items-center px-3 py-2 rounded text-white-500 hover:text-white-300"
         >
           <svg
-            className={`fill-indigo-900 h-3 w-3 ${isOpen ? "hidden" : "block"}`}
+            className={`fill-indigo-800 h-3 w-3 ${isOpen ? "hidden" : "block"}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
           <svg
-            className={`h-3 w-3 fill-indigo-900 ${isOpen ? "block" : "hidden"}`}
+            className={`h-3 w-3 fill-indigo-800 ${isOpen ? "block" : "hidden"}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -52,44 +64,23 @@ const Navbar = () => {
         }`}
       >
         <div className="text-base ">
-          <motion.p
-            initial={{ y: -140, opacity: 0, scale: 0.5 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-            }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth"
-          >
-            <SmoothScrollLink to="about" onClick={() => setIsOpen(false)}>
-              About
-            </SmoothScrollLink>
-          </motion.p>
-          <motion.p
-            initial={{ y: -160, opacity: 0, scale: 0.5 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-            }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth "
-            onClick={() => setIsOpen(false)}
-          >
-            <SmoothScrollLink to="projects" onClick={() => setIsOpen(false)}>
-              Projects
-            </SmoothScrollLink>
-          </motion.p>
-          <motion.p
-            initial={{ y: -180, opacity: 0, scale: 0.5 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-            }}
-            className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-900 mr-4 hover:text-slate-950 scroll-smooth"
-            onClick={() => setIsOpen(false)}
-          >
-            <SmoothScrollLink to="contact" onClick={() => setIsOpen(false)}>
-              Contact
-            </SmoothScrollLink>
-          </motion.p>
+          {sections.map((section) => (
+            <motion.p
+              initial={{ y: -140, opacity: 0, scale: 0.5 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+              }}
+              className="block mt-4 lg:inline-block lg:mt-0 lg:mr-11 text-indigo-800 mr-4 hover:text-slate-950 scroll-smooth"
+            >
+              <SmoothScrollLink
+                to={section.reference}
+                onClick={() => setIsOpen(false)}
+              >
+                {section.title}
+              </SmoothScrollLink>
+            </motion.p>
+          ))}
         </div>
         <motion.a
           initial={{ y: -200, opacity: 0, scale: 0.5 }}
@@ -97,13 +88,13 @@ const Navbar = () => {
           transition={{
             duration: 1.2,
           }}
-          href="/assets/cv/JulietaMagnagoResume.pdf"
+          href="/assets/cv/Julieta Magnago Resume.pdf"
           target="_blank"
           type="application/pdf"
           rel="alternate"
         >
           <button
-            className={`bg-transparent  hvr-sweep-to-right text-indigo-900 font-semibold hover:text-white py-1 px-4 border border-indigo-900  active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300  ${
+            className={`bg-transparent  hvr-sweep-to-right text-indigo-800 font-semibold hover:text-white py-1 px-4 border border-indigo-800  active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300  ${
               isOpen && "mt-10 px-11 py-2"
             }`}
           >

@@ -39,7 +39,7 @@ const Social = (props: Props) => {
                 <Instagram />
               </Link>
             </li>
-            <li className="border border-indigo-900 h-16"></li>
+            <li className="border border-indigo-800 h-16"></li>
           </ul>
         </div>
       ) : (

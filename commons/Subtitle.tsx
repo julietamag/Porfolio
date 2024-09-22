@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = { text: string};
+interface Props  { text: string};
 
-const Subtitle = (props: Props) => {
-  const { text } = props;
+const Subtitle = ({text}: Props) : JSX.Element => {
   return (
-    <div className="flex mx-4 justify-center items-center my-5" >
+    <div className="flex mx-4 justify-center items-center" >
       <motion.h2
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -15,7 +14,7 @@ const Subtitle = (props: Props) => {
         }}
         viewport={{ once: true }}
         className="mr-4 font-bold text-4xl text-left "
-        style={{fontSize: '2.25rem'}}
+        style={{fontSize: '2.25rem', fontFamily: 'Syne'}}
       >
         {text}
       </motion.h2>

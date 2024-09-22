@@ -26,7 +26,8 @@ const Title = (props: Props) => {
             delay: 1.2,
             duration: 1,
           }}
-          className=" lg:text-7xl my-4 font-bold text-slate-950 text-5xl "
+          className=" lg:text-7xl py-4 font-bold text-slate-950 text-5xl "
+          style={{fontFamily: "syne"}}
         >
           Julieta Magnago,
         </motion.h1>

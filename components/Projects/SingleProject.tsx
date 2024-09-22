@@ -66,23 +66,12 @@ const SingleProject = (props: Props) => {
                 viewport={{ once: true }}
                 className="inline-flex gap-5 py-3"
               >
-                {data.demo !== "" && (
-                  <motion.button variants={projectItemVariants}>
-                    <Link
-                      href={data.demo}
-                      target="blank"
-                      className=" p-1 hover:text-indigo-500 link link--leda "
-                      aria-label="Go to live project demo"
-                    >
-                      LIVE
-                    </Link>
-                  </motion.button>
-                )}
+               
                 <motion.button variants={itemVariantsList}>
                   <Link
                     href={data.gitHub}
                     target="blank"
-                    className=" p-1 hover:text-indigo-500 link link--leda"
+                    className=" p-1 hover:text-indigo-600 font-mono link link--leda"
                     aria-label="Go to GitHub Repo"
                   >
                     CODE
@@ -107,6 +96,7 @@ const SingleProject = (props: Props) => {
                   duration: 0.8,
                 }}
                 viewport={{ once: true }}
+                className="text-sm"
               >
                 {data.description}
               </motion.p>
@@ -122,7 +112,7 @@ const SingleProject = (props: Props) => {
                   <motion.li
                     variants={itemVariantsList}
                     key={stack}
-                    className="rounded-2xl border p-1 hover:bg-indigo-800 hover:text-slate-100"
+                    className="text-sm rounded-2xl border px-2 py-1 bg-slate-100  hover:bg-indigo-800 hover:text-slate-100"
                   >
                     {stack}
                   </motion.li>

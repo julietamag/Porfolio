@@ -1,0 +1,18 @@
+export const techStack = [
+  "HTML",
+  "CSS",
+  "TypeScript",
+  "JavaScript (ES6+)",
+  "React.js",
+  "Context API",
+  "Cypress",
+  "Webpack",
+  "Redux",
+  "Node.js",
+  "SQL",
+  "Next.js",
+  "Bootstrap",
+  "Tailwind",
+  "MaterialUI",
+  "Ant Design",
+];

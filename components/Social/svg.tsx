@@ -1,6 +1,6 @@
 export const GitHub: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    className="h-6 w-6 text-black hover:text-indigo-900 hover:animate-bounce"
+    className="h-6 w-6 text-black hover:text-indigo-800 hover:animate-bounce"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -15,7 +15,7 @@ export const GitHub: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Instagram: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    className="h-6 w-6 hover:text-indigo-900 hover:animate-bounce text-black"
+    className="h-6 w-6 hover:text-indigo-800 hover:animate-bounce text-black"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -32,7 +32,7 @@ export const Instagram: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const LinkedIn: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    className="h-6 w-6 text-black hover:text-indigo-900 hover:animate-bounce"
+    className="h-6 w-6 text-black hover:text-indigo-800 hover:animate-bounce"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"

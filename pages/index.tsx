@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Contact from "@/components/Contact";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import Experience from "@/components/Work";
 
 const Home = () => {
   return (
@@ -18,10 +19,19 @@ const Home = () => {
         id="about"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className=" scroll-smooth scroll-my-28 "
+        className=" scroll-smooth scroll-my-28"
         viewport={{ once: true }}
       >
         <About />
+      </motion.section>
+      <motion.section
+        id="experience"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className=" max-w-screen mt-44 md:mt-62 lg:mt-48 scroll-smooth scroll-my-28"
+        viewport={{ once: true }}
+      >
+        <Experience />
       </motion.section>
       <motion.section
         id="projects"

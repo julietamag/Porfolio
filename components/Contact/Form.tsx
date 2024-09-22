@@ -67,7 +67,7 @@ const Form: React.FC<Props> = (props) => {
           type="text"
           placeholder="Name *"
           required
-          className="border px-3 py-2 w-full focus:border-indigo-900"
+          className="border px-3 py-2 w-full focus:border-indigo-800"
         ></motion.input>
         <motion.input
           variants={formItem}
@@ -75,7 +75,7 @@ const Form: React.FC<Props> = (props) => {
           type="text"
           placeholder="Last Name *"
           required
-          className="border px-3 py-2 w-full focus:border-indigo-900"
+          className="border px-3 py-2 w-full focus:border-indigo-800"
         ></motion.input>
       </div>
 
@@ -85,14 +85,14 @@ const Form: React.FC<Props> = (props) => {
         type="email"
         placeholder="Email *"
         required
-        className="border px-3 py-2 lg:w-6/12 md:w-8/12 w-9/12 focus:border-indigo-900"
+        className="border px-3 py-2 lg:w-6/12 md:w-8/12 w-9/12 focus:border-indigo-800"
       ></motion.input>
       <motion.textarea
         variants={formItem}
         ref={messageRef}
         placeholder="Message *"
         required
-        className="border px-2 pb-32 lg:w-6/12 md:w-8/12 w-9/12 break-words focus:border-indigo-900 "
+        className="border px-2 pb-32 lg:w-6/12 md:w-8/12 w-9/12 break-words focus:border-indigo-800 "
       ></motion.textarea>
 
       <div className="lg:w-6/12 md:w-8/12 w-9/12 inline-flex justify-end">

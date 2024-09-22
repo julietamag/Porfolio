@@ -1,100 +1,56 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { containerVariantsList, itemVariantsList } from "@/lib/motion";
+import { techStack } from "./data";
 
 type Props = {};
 
 export default function TechStack({}: Props) {
-  
+  // Calculate the midpoint to split the array
+  const midpoint = Math.ceil(techStack.length / 2);
+  const firstColumn = techStack.slice(0, midpoint);
+  const secondColumn = techStack.slice(midpoint);
 
   return (
-    <>
-      <motion.ul
-        variants={containerVariantsList}
-        initial="initial"
-        whileInView="animate"
-        viewport={{once: true}}
-        className="md:flex md:justify-center md:items-center md:gap-3  md:my-2 md:text-base inline-flex text-center flex-wrap gap-3 max-w-screen  mt-2 mb-6 mx-8  text-sm"
-      >
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          HTML
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          CSS
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          JavaScript
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          React
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Redux
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Node.js
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          SQL
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Express
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          TypeScript
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Next.js
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Bootstrap
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          Tailwind
-        </motion.li>
-        <motion.li
-          variants={itemVariantsList}
-          className="hover:text-indigo-500 hover:animate-bounce md:min-w-fit"
-        > 
-          MaterialUI
-        </motion.li>
-      </motion.ul>
-    </>
+    <div className="flex flex-wrap font-mono mx-4 text-xs lg:w-11/12 md:w-1/2 sm:w-11/12">
+      <div className="w-1/2">
+        <motion.ul
+          variants={containerVariantsList}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className=" flex-wrap gap-3"
+        >
+          {firstColumn.map((tech, index) => (
+            <motion.li
+              key={index}
+              variants={itemVariantsList}
+              className="hover:text-indigo-500 my-1"
+            >
+              <span className="text-indigo-800">{`\u2023`}</span> {tech}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
+      <div className="w-1/2 ">
+        <motion.ul
+          variants={containerVariantsList}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="flex-wrap gap-3 "
+        >
+          {secondColumn.map((tech, index) => (
+            <motion.li
+              key={index}
+              variants={itemVariantsList}
+              className="hover:text-indigo-500 my-1"
+            >
+              <span className="text-indigo-800">{`\u2023`}</span> {tech}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
+    </div>
   );
 }
