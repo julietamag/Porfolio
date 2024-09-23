@@ -49,7 +49,7 @@ const About = ({}: Props) => {
               Delivery Hero
             </a>
             , where I help build modern, accesible and robust applications that
-            thousands of curomer care agents use daily to assist our customers,
+            thousands of customer care agents use daily to assist our customers,
             riders, and vendors effortlessly.{" "}
           </p>
           <p className="md:text-md text-base">
