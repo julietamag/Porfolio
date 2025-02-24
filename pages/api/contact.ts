@@ -1,4 +1,11 @@
+import rateLimit from "express-rate-limit";
 import { mailOptions, transporter } from "../../config/nodemailer";
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // Limit each IP to 5 requests per 15 min
+  message: { message: "Too many requests, please try again later." },
+});
 
 const CONTACT_MESSAGE_FIELDS: dataMessage = {
   name: "Name",
@@ -25,25 +32,36 @@ const generateEmailContent = (data: dataMessage) => {
 };
 
 const handler = async (req: any, res: any) => {
-  if (req.method === "POST") {
-    const data = req.body;
-    if (!data || !data.name || !data.lastname || !data.email || !data.message) {
-      return res.status(400).send({ message: "Bad request" });
-    }
-
-    try {
-      await transporter.sendMail({
-        ...mailOptions,
-        ...generateEmailContent(data),
-        subject: `${data.name} ${data.lastname} want to reach you!`,
-      });
-
-      return res.status(200).json({ success: true });
-    } catch (err: any) {
-      console.log(err);
-      return res.status(400).json({ message: err.message });
-    }
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method Not Allowed" });
   }
-  return res.status(400).json({ message: "Bad request" });
+
+  await new Promise((resolve, reject) => {
+    limiter(req, res, (result: any) =>
+      result instanceof Error ? reject(result) : resolve(result)
+    );
+  });
+
+  const data = req.body;
+
+  const isValidEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!isValidEmail(data.email) || /\r|\n/.test(data.email)) {
+    return res.status(400).json({ message: "Invalid email format" });
+  }
+
+  try {
+    await transporter.sendMail({
+      ...mailOptions,
+      ...generateEmailContent(data),
+      subject: `${data.name} ${data.lastname} want to reach you!`,
+    });
+
+    return res.status(200).json({ success: true });
+  } catch (err: any) {
+    console.error("Email Error:", err);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 export default handler;

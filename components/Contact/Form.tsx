@@ -1,8 +1,10 @@
 import { sendContactForm } from "@/lib/api";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { toast } from "react-hot-toast";
 import { motion } from "framer-motion";
 import { formContainer, formItem } from "@/lib/motion";
+import DOMPurify from "dompurify";
+import * as z from "zod";
 
 type Props = {};
 
@@ -12,29 +14,40 @@ const Form: React.FC<Props> = (props) => {
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
+  const schema = z.object({
+    name: z.string().min(1, "Name is required").max(50, "Too long"),
+    lastname: z.string().min(1, "Last name is required").max(50, "Too long"),
+    email: z.string().email("Invalid email format"),
+    message: z.string().min(1, "Message is required").max(500, "Too long"),
+  });
+
   const handleSubmit = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
+
     let values = {
-      name: nameRef.current?.value,
-      lastname: lastnameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value,
+      name: DOMPurify.sanitize(nameRef.current?.value || ""),
+      lastname: DOMPurify.sanitize(lastnameRef.current?.value || ""),
+      email: DOMPurify.sanitize(emailRef.current?.value || ""),
+      message: DOMPurify.sanitize(messageRef.current?.value || ""),
     };
 
+    const validation = schema.safeParse(values);
+    if (!validation.success) {
+      toast.error(validation.error.errors[0].message);
+      return;
+    }
+
     try {
-      if (!values.name || !values.lastname || !values.email || !values.message)
-        return toast.error("Come on! You must complete all fields");
       await sendContactForm(values);
+      toast.success("Message sent successfully!");
       if (nameRef.current) nameRef.current.value = "";
       if (lastnameRef.current) lastnameRef.current.value = "";
       if (emailRef.current) emailRef.current.value = "";
       if (messageRef.current) messageRef.current.value = "";
-      toast.success("Yeii message sent! I will try to reply ASAP");
     } catch (error) {
-      toast.error("Uhmmm something failed sending the message");
-      console.log(error);
+      toast.error("Sorry, something went wrong!");
     }
   };
 
